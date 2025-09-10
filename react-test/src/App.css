@@ -1,38 +1,276 @@
 .App {
-  text-align: center;
+    text-align: center;
+    user-select: none;
+}
+
+.App * {
+    user-select: none;
+}
+
+.App {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-touch-callout: none;
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -ms-user-drag: none;
+    user-drag: none;
+}
+
+.App {
+    pointer-events: auto;
+}
+
+.App * {
+    pointer-events: auto;
+}
+
+.App {
+    -webkit-touch-callout: none;
+}
+
+body {
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -webkit-touch-callout: none;
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -ms-user-drag: none;
+    user-drag: none;
+    pointer-events: auto;
+}
+
+* {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-touch-callout: none;
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -ms-user-drag: none;
+    user-drag: none;
+}
+
+.App-logo,
+.neon-button,
+.grid,
+.cell,
+.snake,
+.food,
+.game-over {
+    pointer-events: auto;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
 }
 
 .App-logo {
-  height: 40vmin;
-  pointer-events: none;
+    height: 40vmin;
+    pointer-events: none;
+    transition: transform 0.5s ease;
+    filter: drop-shadow(0 0 10px #61dafb) drop-shadow(0 0 20px #61dafb) drop-shadow(0 0 30px #61dafb);
+    animation: neon-glow 2s ease-in-out infinite alternate;
+}
+
+.App-logo:hover {
+    transform: scale(1.1);
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+    .App-logo {
+        animation: App-logo-spin infinite 10s linear;
+    }
+}
+
+.App-logo:hover {
+    animation-play-state: paused;
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+}
+
+h1 {
+    color: #61dafb;
+    transition: color 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
+    text-shadow: 0 0 5px #61dafb, 0 0 10px #61dafb, 0 0 15px #61dafb, 0 0 20px #61dafb;
+    animation: neon-text 2s ease-in-out infinite alternate;
+}
+
+h1:hover {
+    color: #ff6b6b;
+    transform: scale(1.2);
+    text-shadow: 0 0 5px #ff6b6b, 0 0 10px #ff6b6b, 0 0 15px #ff6b6b, 0 0 20px #ff6b6b;
+}
+
+.neon-button {
+    background: transparent;
+    border: 2px solid #61dafb;
+    color: #61dafb;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 5px #61dafb, 0 0 10px #61dafb, 0 0 15px #61dafb;
+    animation: neon-button-glow 2s ease-in-out infinite alternate;
+    margin-top: 20px;
+}
+
+.neon-button:hover {
+    background: #61dafb;
+    color: #282c34;
+    box-shadow: 0 0 10px #61dafb, 0 0 20px #61dafb, 0 0 30px #61dafb;
 }
 
 .App-link {
-  color: #61dafb;
+    color: #61dafb;
 }
 
 @keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes neon-glow {
+    from {
+        filter: drop-shadow(0 0 10px #61dafb) drop-shadow(0 0 20px #61dafb) drop-shadow(0 0 30px #61dafb);
+    }
+    to {
+        filter: drop-shadow(0 0 15px #61dafb) drop-shadow(0 0 30px #61dafb) drop-shadow(0 0 45px #61dafb);
+    }
+}
+
+@keyframes neon-text {
+    from {
+        text-shadow: 0 0 5px #61dafb, 0 0 10px #61dafb, 0 0 15px #61dafb, 0 0 20px #61dafb;
+    }
+    to {
+        text-shadow: 0 0 10px #61dafb, 0 0 20px #61dafb, 0 0 30px #61dafb, 0 0 40px #61dafb;
+    }
+}
+
+@keyframes neon-button-glow {
+    from {
+        box-shadow: 0 0 5px #61dafb, 0 0 10px #61dafb, 0 0 15px #61dafb;
+    }
+    to {
+        box-shadow: 0 0 10px #61dafb, 0 0 20px #61dafb, 0 0 30px #61dafb;
+    }
+}
+
+.game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: -50px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(20, 20px);
+    grid-template-rows: repeat(20, 20px);
+    gap: 1px;
+    border: 2px solid #61dafb;
+    box-shadow: 0 0 10px #61dafb;
+}
+
+.cell {
+    width: 20px;
+    height: 20px;
+    background-color: #282c34;
+    border: 1px solid #61dafb;
+}
+
+.snake {
+    background-color: #61dafb;
+    box-shadow: 0 0 5px #61dafb;
+}
+
+.food {
+    background-color: #ff6b6b;
+    box-shadow: 0 0 5px #ff6b6b;
+}
+
+.game-over {
+    color: #ff6b6b;
+    font-size: 2rem;
+    text-shadow: 0 0 10px #ff6b6b;
+    margin-top: 20px;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    animation: modal-appear 0.5s ease-out;
+}
+
+.modal-content {
+    background: #282c34;
+    border: 2px solid #61dafb;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 0 20px #61dafb, 0 0 40px #61dafb, 0 0 60px #61dafb;
+    animation: modal-glow 2s ease-in-out infinite alternate;
+}
+
+.modal-content h2 {
+    color: #61dafb;
+    text-shadow: 0 0 10px #61dafb;
+    margin-bottom: 10px;
+}
+
+.modal-content p {
+    color: #ffffff;
+    text-shadow: 0 0 5px #ffffff;
+}
+
+@keyframes modal-appear {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes modal-glow {
+    from {
+        box-shadow: 0 0 20px #61dafb, 0 0 40px #61dafb, 0 0 60px #61dafb;
+    }
+    to {
+        box-shadow: 0 0 30px #61dafb, 0 0 60px #61dafb, 0 0 90px #61dafb;
+    }
 }
