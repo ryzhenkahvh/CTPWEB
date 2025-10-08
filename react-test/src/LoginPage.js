@@ -1,4 +1,3 @@
-// НЕ ВОРК!
 import React, { useState } from 'react';
 
 //вход
@@ -78,5 +77,6 @@ function LoginPage({ onLogin }) {
     </div>
   );
 }
+
 
 export default LoginPage;
