@@ -19,6 +19,7 @@ class DatabaseService {
 
   //исходные данные
   seedData() {
+  //НОТ ВОРК!!!
     //суперадм существует?
     const accounts = this.getAccounts();
     const adminExists = accounts.find(account => account.username === 'admin');
@@ -142,5 +143,6 @@ class DatabaseService {
 
 //креатим бд
 const databaseService = new DatabaseService();
+
 
 export default databaseService;
