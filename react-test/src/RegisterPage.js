@@ -1,6 +1,3 @@
-//НЕ ВОРК!
-
-
 import React, { useState } from 'react';
 
 //рега
@@ -147,5 +144,6 @@ function RegisterPage() {
     </div>
   );
 }
+
 
 export default RegisterPage;
