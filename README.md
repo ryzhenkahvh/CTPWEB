@@ -1,0 +1,1 @@
+![Anime GIF](https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExZTNseWJmdjFyNTF0bzA1N29kdzNlY3Fzd2dpbW1jNHBhMnRtdjN6dSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/A5yOQJ3X3y0Xyd476S/giphy.gif)
